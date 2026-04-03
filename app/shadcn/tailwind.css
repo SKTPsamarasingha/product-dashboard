@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Instrument+Serif:ital@0;1&family=Manrope:wght@200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-white: #fff;
+    --color-off-white: #F3F4F4;
+
+    --color-black: #000000;
+    --color-dark: #1b1d1e;
+    --color-grey: #e8e6e6;
+
+    --color-red: #d0021b;
+
+
+    --font-brand: "Inter", sans-serif;
+
+
+    --breakpoint-mobile: 320px;
+    --breakpoint-laptop: 1024px;
+    --breakpoint-desktop: 1280px;
+
+}
+
+.dark {
+    @theme {
+        --color-off-white: #121212;
+        --color-white: #1b1d1e;
+        --color-black: #ffffff;
+        --color-grey: #2a2d2e;
+    }
+}
+
+@layer base {
+    *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: var(--font-brand);
+        line-height: var(--leading-normal);
+        background-color: var(--color-off-white);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+}
+
+.border {
+    border: 1px solid var(--color-black);
+}
