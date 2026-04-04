@@ -16,7 +16,7 @@ const Menu = () => {
 
     return (
         <menu
-            className={`h-screen relative ${isOpen ? 'w-[18rem]' : 'w-[4rem]'} 
+            className={`z-100 h-screen relative ${isOpen ? 'w-[20rem] ' : 'w-[4rem] '} 
             overflow-hidden h-full transition-all duration-300 
             dark:bg-black dark:text-white text-black bg-white
 `}

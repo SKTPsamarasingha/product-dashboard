@@ -3,10 +3,12 @@
 
 @theme {
     --color-white: #fff;
+    --color-off-white: #e4e1e1;
+
     --color-black: #000000;
     --color-grey: #e8e6e6;
-
     --color-red: #d0021b;
+    --color-green: #91D06C;
 
 
     --font-brand: "Inter", sans-serif;
@@ -37,10 +39,14 @@
         scroll-behavior: smooth;
     }
 
+    .border {
+        border: 1px solid var(--color-black);
+    }
 
+    .dark .border {
+        border: 1px solid var(--color-white);
+
+    }
 }
 
 
-.border {
-    border: 1px solid var(--color-black);
-}
