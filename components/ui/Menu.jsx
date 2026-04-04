@@ -8,18 +8,18 @@ import {useEffect, useState} from "react";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {businessNav, userNav} from "@/app/constant";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const Menu = () => {
     const [isOpen, setIsOpen] = useState(true);
-    const [isDark, setIsDark] = useState(false);
-
     const pathname = usePathname();
 
     return (
         <menu
-            className={`border-l border-black relative ${isOpen ? 'w-[18rem]' : 'w-[4rem]'} 
-            overflow-hidden h-full transition-all duration-300
-            bg-white text-black`}
+            className={`h-screen relative ${isOpen ? 'w-[18rem]' : 'w-[4rem]'} 
+            overflow-hidden h-full transition-all duration-300 
+            dark:bg-black dark:text-white text-black bg-white
+`}
             /* ^ Uses your variables: --color-white and --color-black */
         >
             <div className="flex mt-8 mb-15 items-center">
@@ -44,7 +44,7 @@ const Menu = () => {
                             className={`
                                 flex items-center justify-start ml-3 mt-4 p-2.5 rounded-[0.5rem] transition-colors
                                 ${isOpen ? 'w-[16rem]' : 'w-fit'}  
-                                ${isActive ? 'bg-grey' : 'hover:bg-grey/50'}
+                                ${isActive ? 'bg-grey text-black' : 'hover:bg-grey/50'}
                             `}
                         >
                             <Icon size={20} strokeWidth={2.5}/>
@@ -58,19 +58,7 @@ const Menu = () => {
                 })}
             </ul>
 
-            <button
-                // onClick={toggleTheme}
-                className={`cursor-pointer mt-auto mb-4 mx-3
-              flex items-center rounded-[0.5rem] px-2.5 py-3 text-sm font-medium
-
-              ${isOpen ? "w-[16rem] gap-3" : "w-fit justify-center"}
-            `}
-            >
-                {isDark ? <Sun size={20} strokeWidth={2.5}/> : <Moon size={20} strokeWidth={2.5}/>}
-                {isOpen && <span className="uppercase text-[12px] tracking-wide pt-1">
-                {isDark ? "Light Mode" : "Dark Mode"}
-            </span>}
-            </button>
+            <ThemeToggle isOpen={isOpen}/>
 
 
         </menu>
