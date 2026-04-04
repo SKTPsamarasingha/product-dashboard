@@ -2,6 +2,7 @@ import {Geist, Geist_Mono} from "next/font/google";
 import "./shadcn/tailwind.css";
 import Menu from "@/components/ui/Menu";
 import {ThemeProvider} from "next-themes";
+import {Toaster} from "sonner";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -32,6 +33,8 @@ export default function RootLayout({children}) {
                 <Menu/>
                 <main className="flex-1 overflow-y-auto">
                     {children}
+                    <Toaster position="top-right" richColors closeButton />
+
                 </main>
             </div>
         </ThemeProvider>
