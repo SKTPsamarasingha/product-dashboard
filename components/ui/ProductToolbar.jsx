@@ -59,7 +59,7 @@ export const ProductToolbar = ({onSearch, onSort, onFilter}) => {
 
     return (
         <div
-            className="flex laptop:flex-row mobile:flex-col laptop:items-center mobile:items-start  bg-white dark:bg-black  fixed laptop:top-20 mobile:top-14  w-full h-[2rem] transition-colors duration-300">
+            className="flex laptop:flex-row mobile:flex-col items-start justify-between  bg-white dark:bg-black  fixed laptop:top-20 mobile:top-14  w-full h-[2rem] transition-colors duration-300">
 
             {/* Search */}
             <div
@@ -81,7 +81,7 @@ export const ProductToolbar = ({onSearch, onSort, onFilter}) => {
             </div>
 
             <div
-                className={'z-[100]  fixed laptop:left-[67rem] laptop:top-19 mobile:top-21 mt-1 w-fit h-[2rem] flex items-center justify-between gap-2'}>
+                className={'z-[100] mr-25  w-fit h-[2rem] flex items-center justify-between gap-2'}>
                 {/* Sort */}
                 <select
                     value={activeSort}

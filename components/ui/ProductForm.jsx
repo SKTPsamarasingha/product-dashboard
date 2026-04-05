@@ -198,7 +198,7 @@ export const ProductForm = ({isOpen, onClose, initialData, isEdit, onSuccess}) =
 
                         {/* Image Upload */}
                         <label
-                            className="flex flex-col items-center justify-center w-full h-48 border-2 rounded-[5px] cursor-pointer bg-white hover:bg-gray-50 overflow-hidden">
+                            className="flex flex-col items-center justify-center w-full laptop:h-48 mobile:h-25 border-2 rounded-[5px] cursor-pointer bg-white hover:bg-gray-50 overflow-hidden">
                             {preview ? (
                                 <Image
                                     src={preview}
