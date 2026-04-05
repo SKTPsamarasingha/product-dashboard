@@ -8,6 +8,7 @@ const ProductTable = ({products, handleEdit, handleDelete}) => {
                 <thead>
                 <tr className="text-gray-500 dark:text-gray-400 text-[12px] uppercase tracking-wider">
                     <th className="px-6 py-3 font-medium">Product</th>
+                    <th className="px-6 py-3 font-medium">Description</th>
                     <th className="px-6 py-3 font-medium">Price</th>
                     <th className="px-6 py-3 font-medium text-right">Actions</th>
                 </tr>

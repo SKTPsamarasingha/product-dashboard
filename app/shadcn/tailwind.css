@@ -8,7 +8,7 @@
     --color-black: #000000;
     --color-grey: #e8e6e6;
     --color-red: #d0021b;
-    --color-green: #91D06C;
+    --color-green: #1B8E2D ;
 
 
     --font-brand: "Inter", sans-serif;
@@ -47,6 +47,7 @@
         border: 1px solid var(--color-white);
 
     }
+
 }
 
 
